@@ -1,0 +1,9 @@
+/* material input */
+
+/* couleur des champs et des bordures */
+#forms input, #forms .mdl-textfield__label{color: #fff;}
+#forms input[type="text"]{border-bottom: 1px solid rgba(255,255,255,0.32);}
+#forms .mdl-textfield__label:after{bottom: 13px;}
+
+/* recherche */
+#search .mdl-textfield__input{border-bottom: 1px solid rgba(255,255,255,0.32);}

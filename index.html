@@ -10,10 +10,16 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Material Lite (for PHP) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <!-- atomic elements CSS -->
     <link rel="stylesheet" href="forms.css">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="style.css">
+    <!-- font awesome icons 4.7 -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
     <!-- Ionic icons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Optional JavaScript -->
@@ -27,6 +33,30 @@
 </head>
 <body>
 <!-- sidebar -->
+<div class="lateral-menu col-auto px-0">
+    <div class="row align-items-center h-100">
+        <div class="col-12 px-0">
+            <div class="col-12 text-center px-0 menu-icons mb-2" dir="hamburger-zone">
+                <a class="col-12 px-0">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <div class="col-12 px-0">Menus</div>
+                </a>
+            </div>
+            <div class="col-12 text-center px-0 menu-icons mb-2" dir="hamburger-zone">
+                <a class="col-12 px-0">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                    <div class="col-12 px-0">Forms</div>
+                </a>
+            </div>
+            <div class="col-12 text-center px-0 menu-icons mb-2" dir="hamburger-zone">
+                <a class="col-12 px-0">
+                    <i class="fa fa-spinner" aria-hidden="true"></i>
+                    <div class="col-12 px-0">Loads</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="sidebar">
     <div class="sidebar-overlay"></div>
     <div class="sidebar-content">
@@ -45,21 +75,26 @@
         </div>
     </div>
 </div>
+<!-- stars -->
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
 <div class="container-fluid">
-    <!-- stars -->
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
     <!-- Top menu -->
+
 
     <div class="container">
         <div class="row">
             <h2 class="col-12 mt-5"><span>élements Atomiques CSS</span></h2>
             <h3 class="col-12 text-center">Par Jonathan Rodrigues</h3>
+            <div class="col-12">
+                Bootstrap 4.0<br>Material lite for php (utiliser Angular Material sur Angular 2+)<br>Font awesome icons
+            </div>
         </div>
     </div>
+
     <!-- Hamburger menus -->
-    <div class="container mt-4">
+    <div class="container mt-5" id="hamburger-zone">
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="row h-100 align-items-center">
@@ -126,23 +161,112 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="forms-zone">
             <div class="col-12">
                 <h2 class="col-12 my-5"><span>élements de forumaire</span></h2>
+            </div>
+        </div>
+        <div class="row" id="forms">
+            <div class="col-12 col-md-6">
+                <div class="row h-100 align-items-center">
+                    <h2 class="col-12 my-2">Inputs Texte/nombres</h2>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">Simple input</div>
+                            <!-- Simple Textfield -->
+                            <form class="col-12" action="#">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" id="sample1">
+                                    <label class="mdl-textfield__label" for="sample1">Juste du texte...</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">Nombre</div>
+                            <!-- Simple Textfield -->
+                            <form action="#" class="col-12">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                                    <label class="mdl-textfield__label" for="sample2">Nombre...</label>
+                                    <span class="mdl-textfield__error">La valeur n'est pas un nombre!</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">Label flotant</div>
+                            <!-- Simple Textfield -->
+                            <form action="#" class="col-12">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Label flotant...</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">Label numérique flotant</div>
+                            <!-- Simple Textfield -->
+                            <form action="#" class="col-12">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                                    <label class="mdl-textfield__label" for="sample4">Nombre flotant...</label>
+                                    <span class="mdl-textfield__error">La valeur n'est pas un nombre!</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="search">
+            <div class="col-12 col-md-6">
+                <div class="row h-100 align-items-center">
+                    <h2 class="col-12 my-2">Recherche</h2>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <!-- Recherche -->
+                            <form action="#" class="col-12">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                                    <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+                                        <i class="material-icons">search</i>
+                                    </label>
+                                    <div class="mdl-textfield__expandable-holder">
+                                        <input class="mdl-textfield__input" type="text" id="sample6">
+                                        <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-3" id="load-zone">
+            <div class="col-12">
+                <h2 class="col-12 my-5"><span>Icônes de chargement</span></h2>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="row h-100 align-items-center">
-                    <h2 class="col-12 my-2">Inputs Texte</h2>
+                    <h2 class="col-12 my-2">Material loads</h2>
                 </div>
-            </div>
-            <div class="col-12 col-md-6">
-
             </div>
         </div>
     </div>
 </div>
-
 </body>
 </html>

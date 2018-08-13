@@ -1,16 +1,27 @@
 html,body{
     color: #fff;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    min-height: 100vh;
     height: 100vh;
     background-color: #cccccc;
     overflow: hidden;
 }
 body > .container-fluid{
-    overflow: auto;
-    min-height: 100vh;
+    height: 100vh;
+    overflow-y: auto;
 }
-
+/* custom scrollbars */
+body > .container-fluid::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #000;
+}
+body > .container-fluid::-webkit-scrollbar{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+body > .container-fluid::-webkit-scrollbar-thumb
+{
+    background-color: #fff;
+}
 /* stars effect */
 #stars {
     width: 1px;
@@ -104,3 +115,4 @@ h3 span{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
