@@ -446,6 +446,7 @@
 /* lateral menu */
 .lateral-menu{
     position: fixed;
+    z-index: 10;
     top: 0;
     right: 0;
     width: 100px;
@@ -475,4 +476,15 @@
 }
 .lateral-menu .menu-icons:hover div{
     right: 0;
+}
+
+/* light */
+.light .lateral-menu:hover{
+    border-left: 1px solid #000;
+}
+.light .hamburger .line{
+    background-color: #000;
+}
+.light .lateral-menu a{
+    color : #000;
 }

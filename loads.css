@@ -956,3 +956,28 @@ svg {
     75% { stroke: #78325a; }
     99% { stroke: #78325a; }
 }
+
+/* theme light */
+.light .mdl-slider__background-upper{
+    background: rgba(0,0,0,.26);
+}
+.light .sk-rotating-plane, .light .sk-double-bounce .sk-child, .light .sk-wave .sk-rect, .light .sk-wandering-cubes .sk-cube, .light .sk-spinner-pulse, .light .sk-chasing-dots .sk-child
+, .light .sk-three-bounce .sk-child, .light .sk-circle-bounce .sk-child:before, .light .sk-cube-grid .sk-cube, .light .sk-fading-circle .sk-circle:before,
+.light .sk-folding-cube .sk-cube:before{
+    background-color: #000;
+}
+.light .spinner.spinner1{
+    border: 3px solid rgba(0, 0, 0, 0.25);
+    border-top-color: rgba(0,0,0, 1);
+    border-radius: 50%;
+}
+.light .spinner.spinner2{
+    border: 3px solid transparent;
+    border-top-color: rgba(0,0,0, 1);
+    border-bottom-color: rgba(0,0,0, 1);
+}
+.light .spinner.spinner3{
+    border-top: 3px solid rgba(0,0,0, 1);
+    border-right: 3px solid transparent;
+    border-radius: 50%;
+}

@@ -11,5 +11,11 @@ $(document).ready(function(){
     }), $(".sidebar .sidebar-overlay").on("touchstart click", function(e) {
         e.preventDefault(), $(".hamburger").click(),$('.hamburger').removeClass("is-active"), $(this).removeClass("fadeIn").addClass("fadeOut")
     })
+
+    /* change theme */
+    $('.changeTheme').on('click', function(){
+        console.log("aaa");
+        $("body, #stars, #stars2, #stars3").toggleClass('light');
+    });
 });
 

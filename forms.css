@@ -12,3 +12,13 @@
 .mdl-slider__background-upper{
     background: rgba(255,255,255,.26);
 }
+
+/* theme light */
+.light #forms input, .light #forms .mdl-textfield__label{color: #000;}
+.light #forms input[type="text"]{border-bottom: 1px solid rgba(0,0,0,0.32);}
+
+.light #search .mdl-textfield__input{border-bottom: 1px solid rgba(0,0,0,0.32);}
+
+.light .mdl-slider__background-upper{
+    background: rgba(0,0,0,.26);
+}
