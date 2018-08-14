@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loads.css">
+    <link rel="stylesheet" href="buttons.css">
     <!-- font awesome icons 4.7 -->
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
     <!-- Ionic icons -->
@@ -29,32 +30,39 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <!-- Menus scripts -->
+    <!-- scripts personnels  -->
     <script src="menu.js"></script>
+    <script src="scroll.js"></script>
 </head>
 <body>
 <!-- sidebar -->
 <div class="lateral-menu col-auto px-0">
     <div class="row align-items-center h-100">
         <div class="col-12 px-0">
-            <div class="col-12 text-center px-0 menu-icons mb-2" dir="hamburger-zone">
-                <a class="col-12 px-0">
+            <a class="col-12 text-center px-0 menu-icons" href="#hamburger-zone">
+                <div class="col-12 px-0 mb-2">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                     <div class="col-12 px-0">Menus</div>
-                </a>
-            </div>
-            <div class="col-12 text-center px-0 menu-icons mb-2" dir="hamburger-zone">
-                <a class="col-12 px-0">
+                </div>
+            </a>
+            <a class="col-12 text-center px-0 menu-icons" href="#forms-zone">
+                <div class="col-12 px-0 mb-2">
                     <i class="fa fa-check-square-o" aria-hidden="true"></i>
                     <div class="col-12 px-0">Forms</div>
-                </a>
-            </div>
-            <div class="col-12 text-center px-0 menu-icons mb-2" dir="hamburger-zone">
-                <a class="col-12 px-0">
+                </div>
+            </a>
+            <a class="col-12 text-center px-0 menu-icons" href="#buttons-zone">
+                <div class="col-12 px-0 mb-2">
+                    <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                    <div class="col-12 px-0">Buttons</div>
+                </div>
+            </a>
+            <a class="col-12 text-center px-0 menu-icons" href="#load-zone">
+                <div class="col-12 px-0 mb-2">
                     <i class="fa fa-spinner" aria-hidden="true"></i>
                     <div class="col-12 px-0">Loads</div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
     </div>
 </div>
@@ -89,7 +97,16 @@
             <h2 class="col-12 mt-5"><span>élements Atomiques CSS</span></h2>
             <h3 class="col-12 text-center">Par Jonathan Rodrigues</h3>
             <div class="col-12">
-                Bootstrap 4.0<br>Material lite for php (utiliser Angular Material sur Angular 2+)<br>Font awesome icons
+                Bootstrap 4.0<br>Material lite for php (utiliser Angular Material sur Angular 2+, documentation disponible <a target="_blank" href="https://material.angular.io/components/categories">ici</a>)<br>Font awesome icons
+            </div>
+            <div class="col-12">
+                D'autre améliorations et éléments sont à venir
+            </div>
+            <div class="col-12">
+                Version 0.2 : icones de chargement
+            </div>
+            <div class="col-12">
+                A venir : <br>Thème Light/Dark<br>Tableaux<br>Cartes<br>Menus horizontaux
             </div>
         </div>
     </div>
@@ -293,6 +310,83 @@
                 </div>
             </div>
         </div>
+        <div class="row" id="buttons-zone">
+            <div class="col-12">
+                <h2 class="col-12 my-5"><span>Boutons</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <!-- Colored FAB button -->
+                            <div class="col-12 text-center">
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+                            <div class="col-12 text-center">Bouton rond coloré</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <!-- Colored FAB button with ripple -->
+                            <div class="col-12 text-center">
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+                            <div class="col-12 text-center">Bouton rond coloré avec effet</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <!-- FAB button with ripple -->
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+                            <div class="col-12 text-center">Bouton rond gris avec effet</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row h-100">
+                            <div class="col-12 text-center align-self-center">
+                                <!-- Raised button -->
+                                <button class="mdl-button mdl-js-button mdl-button--raised">
+                                    Button
+                                </button>
+                            </div>
+                            <div class="col-12 text-center align-self-end">Bouton material carré gris </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row h-100">
+                            <div class="col-12 text-center align-self-center">
+                                <!-- Raised button with ripple -->
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                    Button
+                                </button>
+                            </div>
+                            <div class="col-12 text-center align-self-end">Bouton material carré gris avec effet</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row h-100">
+                            <div class="col-12 text-center align-self-center">
+                                <!-- Colored raised button -->
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                    Button
+                                </button>
+                            </div>
+                            <div class="col-12 text-center align-self-end">Bouton material carré coloré avec effet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row my-3" id="load-zone">
             <div class="col-12">
                 <h2 class="col-12 my-5"><span>Icônes de chargement</span></h2>
@@ -448,6 +542,11 @@
                         <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row my-3" id="card-zone">
+            <div class="col-12">
+                <h2 class="col-12 my-5"><span>Divers</span></h2>
             </div>
         </div>
     </div>

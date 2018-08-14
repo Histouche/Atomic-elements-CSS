@@ -460,18 +460,18 @@
 }
 .lateral-menu a{
     color: #fff;
-    font-size: 25px;
     text-decoration: none !important;
 }
-.lateral-menu .menu-icons{
-    cursor: pointer;
-}
-.lateral-menu a div{
+
+.lateral-menu a div div{
     font-size: 15px;
     position: relative;
     right: -100px;
     transition : all linear 0.1s;
     text-transform: uppercase;
+}
+.lateral-menu a div i{
+    font-size: 25px;
 }
 .lateral-menu .menu-icons:hover div{
     right: 0;
