@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loads.css">
     <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="gooey-menu.css">
     <!-- font awesome icons 4.7 -->
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
     <!-- Ionic icons -->
@@ -33,6 +34,7 @@
     <!-- scripts personnels  -->
     <script src="menu.js"></script>
     <script src="scroll.js"></script>
+    <script src="snackbar.js"></script>
 </head>
 <body>
 <!-- sidebar -->
@@ -109,10 +111,10 @@
                 D'autre améliorations et éléments sont à venir
             </div>
             <div class="col-12">
-                Version 0.2 : icones de chargement
+                Version 0.3 : Transition de thème Light / Dark
             </div>
             <div class="col-12">
-                A venir : <br>Thème Light/Dark<br>Tableaux<br>Cartes<br>Menus horizontaux
+                A venir : <br>Tableaux<br>Cartes<br>Menus horizontaux
             </div>
         </div>
     </div>
@@ -181,6 +183,106 @@
                         <span class="line"></span>
                         <span class="line"></span>
                         <span class="line"></span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row h-100 align-items-center">
+                    <h2 class="col-12 my-2">Menu Hamburger V2</h2>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+                <div class="row justify-content-around">
+                    <div class="col-12 hamb-1">
+                        <div class="row justify-content-center">
+                            <nav class="menu">
+                                <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open">
+                                <label class="menu-open-button" for="menu-open">
+                                    <span class="hamburger-s hamburger-1"></span>
+                                    <span class="hamburger-s hamburger-2"></span>
+                                    <span class="hamburger-s hamburger-3"></span>
+                                </label>
+                                <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-ellipsis-h"></i> </a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-12 hamb-2">
+                        <div class="row justify-content-center">
+                            <nav class="menu">
+                                <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open-2">
+                                <label class="menu-open-button" for="menu-open-2">
+                                    <span class="hamburger-s hamburger-1"></span>
+                                    <span class="hamburger-s hamburger-2"></span>
+                                    <span class="hamburger-s hamburger-3"></span>
+                                </label>
+                                <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-12 hamb-3">
+                        <div class="row justify-content-center">
+                            <nav class="menu">
+                                <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open-3">
+                                <label class="menu-open-button" for="menu-open-3">
+                                    <span class="hamburger-s hamburger-1"></span>
+                                    <span class="hamburger-s hamburger-2"></span>
+                                    <span class="hamburger-s hamburger-3"></span>
+                                </label>
+                                <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-12 hamb-4">
+                        <div class="row justify-content-center">
+                            <nav class="menu">
+                                <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open-4"/>
+                                <label class="menu-open-button" for="menu-open-4">
+                                    <span class="hamburger-s hamburger-1"></span>
+                                    <span class="hamburger-s hamburger-2"></span>
+                                    <span class="hamburger-s hamburger-3"></span>
+                                </label>
+
+                                <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+                                <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+
+
+                            </nav>
+                            <!-- filters -->
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                <defs>
+                                    <filter id="shadowed-goo">
+
+                                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                                        <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                                        <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                                        <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                                        <feComposite in2="shadow" in="goo" result="goo" />
+                                        <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                                    </filter>
+                                    <filter id="goo">
+                                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                                        <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -405,7 +507,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="row">
+                <section class="row">
                     <section class="m-3 mx-4">
                         <div class='sk-rotating-plane'></div>
                     </section>
@@ -514,7 +616,25 @@
                             <div class="spinner spinner3"></div>
                         </div>
                     </section>
-                </div>
+                    <section class="w-100"></section>
+                    <section class="m-3 mx-4 px-3">
+                        <div class="loader-1 center"><span></span></div>
+                    </section>
+                    <section class="m-3 mx-4 px-3">
+                        <div class="loader-2 center"><span></span></div>
+                    </section>
+                    <section class="m-3 mx-4 px-3">
+                        <div class="loader-3 center"><span></span></div>
+                    </section>
+                    <section class="m-3 mx-4 px-3">
+                        <div class="loader-4 center"><span></span></div>
+                    </section>
+                    <section class="m-3 mx-4 px-3">
+                        <div class="loader-5 center"><span></span></div>
+                    </section>
+                    <section class="m-3 mx-4 px-3">
+                        <div class="loader-6 center"><span></span></div>
+                    </section>
             </div>
             <div class="col-12 col-md-6">
                 <div class="row h-100 align-items-center">
@@ -550,9 +670,75 @@
                 </div>
             </div>
         </div>
-        <div class="row my-3" id="card-zone">
+        <div class="row my-3" id="other-zone">
             <div class="col-12">
                 <h2 class="col-12 my-5"><span>Divers</span></h2>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+                <h2 class="col-12 my-2">Badges</h2>
+            </div>
+            <div class="col-12 col-md-6 mb-3">
+                <div class="row h-100 align-items-center">
+                   <div class="col">
+                       <div class="row justify-content-center">
+                           <!-- Number badge on icon -->
+                            <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">account_box</div>
+                       </div>
+                   </div>
+                    <div class="col">
+                        <div class="row justify-content-center">
+                            <!-- Icon badge on icon -->
+                            <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="♥">account_box</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row justify-content-center">
+                            <!-- Number badge -->
+                            <span class="mdl-badge" data-badge="4">Inbox</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row justify-content-center">
+                            <!-- Icon badge -->
+                            <span class="mdl-badge" data-badge="♥">Mood</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <h2 class="col-12 my-2">Tables</h2>
+            </div>
+            <div class="col-12 col-md-6 tables">
+                <div class="row">
+                    <div class="col-12" style="overflow: auto;">
+                        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                            <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Material</th>
+                                <th>Quantity</th>
+                                <th>Unit price</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                                <td>25</td>
+                                <td>$2.90</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                                <td>50</td>
+                                <td>$1.25</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                                <td>10</td>
+                                <td>$2.35</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
