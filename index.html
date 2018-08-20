@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="loads.css">
     <link rel="stylesheet" href="buttons.css">
     <link rel="stylesheet" href="gooey-menu.css">
+    <link rel="stylesheet" href="bootstrap-theme-code.css">
     <!-- font awesome icons 4.7 -->
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
     <!-- Ionic icons -->
@@ -65,7 +66,13 @@
                     <div class="col-12 px-0">Loads</div>
                 </div>
             </a>
-            <a class="col-12 text-center px-0 menu-icons changeTheme" href="#">
+            <a class="col-12 text-center px-0 menu-icons" href="#bootstrap-zone">
+                <div class="col-12 px-0 mb-2">
+                    <span class="col-12 px-0 text-center font-weight-bold" style="font-size: 24px;">B</span>
+                    <div class="col-12 px-0">Bootstrap</div>
+                </div>
+            </a>
+            <a class="col-12 text-center px-0 menu-icons changeTheme" href="javascript:void(0)">
                 <div class="col-12 px-0 mb-2">
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <div class="col-12 px-0">Thème</div>
@@ -107,15 +114,16 @@
             <div class="col-12">
                 Bootstrap 4.0<br>Material lite for php (utiliser Angular Material sur Angular 2+, documentation disponible <a target="_blank" href="https://material.angular.io/components/categories">ici</a>)<br>Font awesome icons
             </div>
-            <div class="col-12">
+            <div class="col-12">²
                 D'autre améliorations et éléments sont à venir
             </div>
             <div class="col-12">
-                Version 0.3 : Transition de thème Light / Dark
+                Version 0.3.1 :Tableaux, Badges
             </div>
             <div class="col-12">
-                A venir : <br>Tableaux<br>Cartes<br>Menus horizontaux
+                A venir : <br>Cartes<br>Menus horizontaux<br>Utilisation simple de la grille bootstrap 4
             </div>
+            <div class="col-12">Note : centralisation de divers éléments HTML/CSS/Javascript pour une intégration plus rapide avec une harmonisation des techniques</div>
         </div>
     </div>
 
@@ -188,7 +196,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="row h-100 align-items-center">
+                <div class="row h-100 align-items-top">
                     <h2 class="col-12 my-2">Menu Hamburger V2</h2>
                 </div>
             </div>
@@ -400,12 +408,20 @@
                             <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
                             <span class="mdl-checkbox__label">Checkbox</span>
                         </label>
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                            <span class="mdl-checkbox__label">Checkbox</span>
+                        </label>
                     </div>
                     <div class="col-12 my-3">Radio</div>
                     <div class="col-12">
                         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
                             <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
                             <span class="mdl-radio__label">First</span>
+                        </label>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                            <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="1" checked>
+                            <span class="mdl-radio__label">Second</span>
                         </label>
                     </div>
                     <div class="col-12 my-3">Switch</div>
@@ -670,6 +686,581 @@
                 </div>
             </div>
         </div>
+        <div class="row mt-5" id="bootstrap-zone">
+            <div class="col-12 mt-5">
+                <div class="row align-items-center">
+                    <h2 class="col-12 my-2">Grille Bootstrap 4</h2>
+                    <h3 class="col-12 my-2 text-center">(minimum IE 10)</h3>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row h-100 align-items-center">
+                    <h4 class="col-12">Comment ça fonctionne</h4>
+                    <div class="col-12">
+                        La grille bootstrap 4 utilise une série de "container", de lignes et de colonnes pour aligner les composants.<br>
+                        La grille est construite avec <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank">flexbox</a>
+                        et est entièremement responsive.
+                    </div>
+                    <h4 class="col-12">Exemple simple</h4>
+                    <div class="col-12">
+                        <div class="bd-example-row">
+                            <div class="bd-example">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            Une des trois colonnes
+                                        </div>
+                                        <div class="col-sm">
+                                            Une des trois colonnes
+                                        </div>
+                                        <div class="col-sm">
+                                            Une des trois colonnes
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      One of three columns
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      One of three columns
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      One of three columns
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        L'exemple ci-dessus crée trois colonnes de largeur égale sur des écrans (ou appareils) de petite taille, de taille moyenne, de grande taille et de très grande taille à l'aide de nos classes de grille prédéfinies. Ces colonnes sont centrées dans la page avec le parent ".container".
+                    </div>
+                    <div class="col-12">
+                        Grâce à flexbox, les colonnes de la grille sans spécification "width" sont automatiquement mises en forme en tant que colonnes de largeur égale.
+                        Exemple : si vous utilisez 3 blocks avec la classe "col"( ou col-sm, col-md, col-lg ou col-xl), les blocks prendront en taille un tiers de la longueur de la ligne.
+                    </div>
+                    <div class="col-12">
+                        Les classes de colonne indiquent le nombre de colonnes que vous souhaitez utiliser parmi les 12 possibles par ligne. Donc, si vous voulez trois colonnes de largeur égale, vous pouvez utiliser .col-4.
+                    </div>
+                    <div class="col-12">
+                        Pour que la grille réponde, il y a cinq points d'arrêt de grille, un pour chaque point d'arrêt sensible : (extra petit), petit, moyen, grand et très grand.
+                        Les points d'arrêt de la grille sont basés sur des media querries de largeur minimale, ce qui signifie qu'ils s'appliquent à ce point d'arrêt et à tous ceux situés au-dessus (p. Ex., .col-sm-4 s'appliquent aux écrans Petits, moyens, grands et très grands mais pas aux extra-petits).
+                    </div>
+                    <h4 class="col-12 mt-5">Options de grille</h4>
+                    <div class="col-12">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    Extra petit </font></font><br>
+                                    <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&lt;576px</font></font></small>
+                                </th>
+                                <th class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    Petit </font></font><br>
+                                    <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">≥576px</font></font></small>
+                                </th>
+                                <th class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    Moyen </font></font><br>
+                                    <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">≥768px</font></font></small>
+                                </th>
+                                <th class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    Grand </font></font><br>
+                                    <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">≥992px</font></font></small>
+                                </th>
+                                <th class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    Extra large </font></font><br>
+                                    <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">≥1200px</font></font></small>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th class="text-nowrap" scope="row"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Largeur maximale du conteneur</font></font></th>
+                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aucun (auto)</font></font></td>
+                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">540px</font></font></td>
+                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">720px</font></font></td>
+                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">960px</font></font></td>
+                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1140px</font></font></td>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap" scope="row"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Préfixe de classe</font></font></th>
+                                <td><code>.col-</code></td>
+                                <td><code>.col-sm-</code></td>
+                                <td><code>.col-md-</code></td>
+                                <td><code>.col-lg-</code></td>
+                                <td><code>.col-xl-</code></td>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap" scope="row"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nombre de colonnes</font></font></th>
+                                <td colspan="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12</font></font></td>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap" scope="row"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Padding de base sur les largeurs</font></font></th>
+                                <td colspan="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">30px (15px de chaque côté d'une colonne)</font></font></td>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap" scope="row"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modification d'ordre de colonne</font></font></th>
+                                <td colspan="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oui</font></font></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4 class="col-12 mt-5">Largeur égale</h4>
+                    <div class="col-12">
+                        <div class="bd-example-row">
+
+                            <div class="bd-example">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            1 sur 2
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            2 sur 2
+                                        </font></font></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            1 sur 3
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            2 sur 3
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            3 sur 3
+                                        </font></font></div>
+                                    </div>
+                                </div>
+                            </div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      1 of 2
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      2 of 2
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      1 of 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      2 of 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      3 of 3
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+                        </div>
+                    </div>
+                    <h4 class="col-12 mt-5">Définition de certaines largeurs de colonnes</h4>
+                    <div class="col-12">
+                        La mise en page automatique des colonnes de la grille Flexbox signifie également que vous pouvez définir la largeur d'une colonne et redimensionner automatiquement les colonnes apparentées. Vous pouvez utiliser des classes de grille prédéfinies (comme indiqué ci-dessous), des mixins de grille ou des largeurs en ligne. Notez que les autres colonnes seront redimensionnées, quelle que soit la largeur de la colonne centrale.
+                    </div>
+                    <div class="col-12">
+                        <div class="bd-example-row">
+
+                            <div class="bd-example">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            1 sur 3
+                                        </font></font></div>
+                                        <div class="col-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            2 sur 3 (plus large)
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            3 sur 3
+                                        </font></font></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            1 sur 3
+                                        </font></font></div>
+                                        <div class="col-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            2 sur 3 (plus large)
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            3 sur 3
+                                        </font></font></div>
+                                    </div>
+                                </div>
+                            </div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      1 of 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
+      2 of 3 (plus large)
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      3 of 3
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      1 of 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-5"</span><span class="nt">&gt;</span>
+      2 of 3 (plus large)
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      3 of 3
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+                        </div>
+                    </div>
+                    <h4 class="col-12">Contenu à largeur variable</h4>
+                    <div class="col-12">
+                        Utilisez des col-{breakpoint}-auto classes pour dimensionner des colonnes en fonction de la largeur naturelle de leur contenu.
+                    </div>
+                    <div class="col-12">
+                        <div class="bd-example-row">
+
+                            <div class="bd-example">
+                                <div class="container">
+                                    <div class="row justify-content-md-center">
+                                        <div class="col col-lg-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            1 sur 3
+                                        </font></font></div>
+                                        <div class="col-md-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Contenu à largeur variable
+                                        </font></font></div>
+                                        <div class="col col-lg-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            3 sur 3
+                                        </font></font></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            1 sur 3
+                                        </font></font></div>
+                                        <div class="col-md-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Contenu à largeur variable
+                                        </font></font></div>
+                                        <div class="col col-lg-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            3 sur 3
+                                        </font></font></div>
+                                    </div>
+                                </div>
+                            </div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-md-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col col-lg-2"</span><span class="nt">&gt;</span>
+      1 of 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-auto"</span><span class="nt">&gt;</span>
+      Variable width content
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col col-lg-2"</span><span class="nt">&gt;</span>
+      3 of 3
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      1 of 3
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-auto"</span><span class="nt">&gt;</span>
+      Variable width content
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col col-lg-2"</span><span class="nt">&gt;</span>
+      3 of 3
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+                        </div>
+                    </div>
+                    <h4 class="col-12">Multi-rangées de largeur égale</h4>
+                    <div class="col-12">
+                        Créez des colonnes de largeur égale couvrant plusieurs lignes en insérant un .w-100où vous voulez que les colonnes soient fractionnées sur une nouvelle ligne. Utilisez une div vide avec la classe "w-100".
+                    </div>
+                    <div class="col-12">
+                        <div class="bd-example-row">
+
+                            <div class="bd-example">
+                                <div class="row">
+                                    <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">col</font></font></div>
+                                    <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">col</font></font></div>
+                                    <div class="w-100"></div>
+                                    <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">col</font></font></div>
+                                    <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">col</font></font></div>
+                                </div>
+                            </div><div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Copy to clipboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copie</font></font></button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"w-100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>col<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+                        </div>
+                    </div>
+                    <h4 class="col-12">
+                        Le responsive
+                    </h4>
+                    <div class="col-12">
+
+                    </div>
+                    <div class="col-12">
+                        <div class="bd-example-row">
+
+                            <div class="bd-example">
+                                <!-- Le contenu sera sur deux lignes en mobile -->
+                                <div class="row">
+                                    <div class="col-12 col-md-8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.col-12 .col-md-8</font></font></div>
+                                    <div class="col-6 col-md-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.col-6 .col-md-4</font></font></div>
+                                </div>
+
+                                <!-- Le contenu sera sur deux lignes en mobile, chaque bloc fera 50% de la ligne -->
+                                <div class="row">
+                                    <div class="col-6 col-md-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.col-6 .col-md-4</font></font></div>
+                                    <div class="col-6 col-md-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.col-6 .col-md-4</font></font></div>
+                                    <div class="col-6 col-md-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.col-6 .col-md-4</font></font></div>
+                                </div>
+
+                                <!-- Les blocks seront toujours à 50% de la taille de la ligne peu importe la taille de l'écran -->
+                                <div class="row">
+                                    <div class="col-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.col-6</font></font></div>
+                                    <div class="col-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.col-6</font></font></div>
+                                </div>
+                            </div><div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Copy to clipboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copie</font></font></button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Le contenu sera sur deux lignes en mobile --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-8"</span><span class="nt">&gt;</span>.col-12 .col-md-8<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Le contenu sera sur deux lignes en mobile, chaque bloc fera 50% de la ligne --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6 col-md-4"</span><span class="nt">&gt;</span>.col-6 .col-md-4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Les blocks seront toujours à 50% de la taille de la ligne peu importe la taille de l'écran --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>.col-6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>.col-6<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+                        </div>
+                    </div>
+                    <h3 class="col-12">Alignement</h3>
+                    <h4 class="col-12">Alignement vertical</h4>
+                    <div class="col-12">
+                        <div class="bd-example-row bd-example-row-flex-cols">
+
+                            <div class="bd-example">
+                                <div class="container">
+                                    <div class="row align-items-start">
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                    </div>
+                                    <div class="row align-items-end">
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                        <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                    </div>
+                                </div>
+                            </div><div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Copy to clipboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copie</font></font></button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-start"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row align-items-end"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bd-example-row bd-example-row-flex-cols">
+
+                            <div class="bd-example">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col align-self-start"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                        <div class="col align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                        <div class="col align-self-end"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des trois colonnes
+                                        </font></font></div>
+                                    </div>
+                                </div>
+                            </div><div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Copy to clipboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copie</font></font></button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col align-self-start"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col align-self-center"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col align-self-end"</span><span class="nt">&gt;</span>
+      Une des trois colonnes
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+                        </div>
+                    </div>
+                    <h4 class="col-12">Alignement horizontal</h4>
+                    <div class="col-12">
+Différents alignements existent avec flexbox
+                    </div>
+                    <div class="col-12">
+                        <div class="bd-example-row">
+
+                            <div class="bd-example">
+                                <div class="container">
+                                    <div class="row justify-content-start">
+                                        <div class="col-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des deux colonnes
+                                        </font></font></div>
+                                        <div class="col-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des deux colonnes
+                                        </font></font></div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des deux colonnes
+                                        </font></font></div>
+                                        <div class="col-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des deux colonnes
+                                        </font></font></div>
+                                    </div>
+                                    <div class="row justify-content-end">
+                                        <div class="col-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des deux colonnes
+                                        </font></font></div>
+                                        <div class="col-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des deux colonnes
+                                        </font></font></div>
+                                    </div>
+                                    <div class="row justify-content-around">
+                                        <div class="col-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des deux colonnes
+                                        </font></font></div>
+                                        <div class="col-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des deux colonnes
+                                        </font></font></div>
+                                    </div>
+                                    <div class="row justify-content-between">
+                                        <div class="col-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des deux colonnes
+                                        </font></font></div>
+                                        <div class="col-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Une des deux colonnes
+                                        </font></font></div>
+                                    </div>
+                                </div>
+                            </div><div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Copy to clipboard"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copie</font></font></button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-start"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Une des deux colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Une des deux colonnes
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Une des deux colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Une des deux colonnes
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-end"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Une des deux colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Une des deux colonnes
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-around"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Une des deux colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Une des deux colonnes
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-between"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Une des deux colonnes
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-4"</span><span class="nt">&gt;</span>
+      Une des deux colonnes
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row my-3" id="other-zone">
             <div class="col-12">
                 <h2 class="col-12 my-5"><span>Divers</span></h2>
@@ -706,7 +1297,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <h2 class="col-12 my-2">Tables</h2>
+                <h2 class="col-12 my-2">Tableaux</h2>
             </div>
             <div class="col-12 col-md-6 tables">
                 <div class="row">
